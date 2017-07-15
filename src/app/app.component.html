@@ -14,5 +14,9 @@
   <hr>
   <button class="btn btn-primary" (click)='timeStamp()'>Display Log</button>
   <p *ngIf='showDisplay' >Secret Password = 'Tuna'</p>
+  <div *ngFor='let logItem of log' 
+  [ngStyle]="{background: logItem >= 5 ? 'blue': 'transparent'}"
+  [ngClass]="{'white-text': logItem >= 5}">
   <p>{{logItem}}</p>
+  </div>
 </div>
